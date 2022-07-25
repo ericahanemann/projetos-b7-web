@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor01: #000;
+    --cor02: #fff;
+    --cor03: #b28756;
+}
+
+header {
+    height: 100px;
+    color: var(--cor02);
+    background-color: var(--cor01);
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+header .container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    background-color: var(--cor03);
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
