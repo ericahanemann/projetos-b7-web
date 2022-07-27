@@ -1,3 +1,5 @@
+/*css interface*/
+
 * {
     margin: 0;
     padding: 0;
@@ -80,6 +82,20 @@ header .container {
 }
 
 
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cor02);
+    background-color: var(--cor03);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
 .banner {
     height: calc(100vh - 100px);
     background-color: var(--cor05);
@@ -123,19 +139,6 @@ header .container {
 .banner h2 {
     text-transform: uppercase;
     margin-top: 20px;
-}
-
-.banner a {
-    display: block;
-    text-decoration: none;
-    color: var(--cor02);
-    background-color: var(--cor03);
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 10px 30px;
-    border-radius: 20px;
-    margin-top: 40px;
 }
 
 .banner .sliders-pointers {
@@ -188,16 +191,15 @@ header .container {
 }
 
 .default .section-body{
-        min-height: 100px;
         width: 100%;
-        background-color: #ccc;
 }
 
 .default.light {
     background-color: #f7f7f7;
 }
 
-.default.light .section-title{
+.default.light .section-title,
+.default.light .section-body {
     color: var(--cor01);
 }
 
@@ -205,6 +207,63 @@ header .container {
     background-color: var(--cor01);
 }
 
-.default.dark .section-title {
+.default.dark .section-title,
+.default.dark .section-body {
     color: var(--cor02);
+}
+
+
+
+
+
+/*css áreas específicas*/
+
+.section-aboutus {
+    display: flex;
+}
+
+.section-aboutus-left {
+    flex: 1;
+}
+
+.section-aboutus-right {
+    width: 520px;
+    text-align: center;
+}
+
+.section-aboutus-right img{
+    width: 480px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+.section-aboutus p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.section-services {
+    display: flex;
+}
+
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+
+.section-service:first-child {
+    border-left: 1px solid #333;
+}
+
+.section-service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.section-service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
 }
