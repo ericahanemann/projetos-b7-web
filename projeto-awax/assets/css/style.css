@@ -10,6 +10,11 @@
     --cor03: #b28756;
 }
 
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
 header {
     height: 100px;
     color: var(--cor02);
@@ -41,4 +46,30 @@ header .container {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+}
+
+.menu ul, 
+.menu li {
+    list-style: none;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu li a {
+    color: var(--cor02);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex; /*precisa aumentar a altura, pra colocar a barrinha em baixo, e como a tag a é inline por padrão, precisa fazer essa alteração*/
+    align-items: center;
+    height: 100px;
+    padding: 0px 10px;
+    border-bottom: 5px solid var(--cor01); /*borda da mesma cor do fundo só pro texto não subir toda vez que passa o mouse (pq tá adicionando uma borda no hover)*/
+}
+
+.menu li a:hover,
+.menu .active a  {
+    border-bottom: 5px solid var(--cor03);
 }
