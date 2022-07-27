@@ -15,6 +15,7 @@
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 13px;
+    overflow-x: hidden;
 }
 
 header {
@@ -158,4 +159,19 @@ header .container {
 
 .banner .pointer.active {
     background-color: var(--cor03);
+}
+
+
+.default {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+}
+
+.default .section-body{
+    
 }
