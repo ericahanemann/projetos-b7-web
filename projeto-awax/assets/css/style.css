@@ -8,6 +8,8 @@
     --cor01: #000;
     --cor02: #fff;
     --cor03: #b28756;
+    --cor04: #ccc;
+    --cor05: #555;
 }
 
 body {
@@ -72,4 +74,14 @@ header .container {
 .menu li a:hover,
 .menu .active a  {
     border-bottom: 5px solid var(--cor03);
+    color: var(--cor04);
+}
+
+
+.banner {
+    height: calc(100vh - 100px);
+    background-color: var(--cor05);
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
 }
