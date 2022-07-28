@@ -1115,8 +1115,8 @@ footer {
         margin-right: 15px;
     }
 
-    .section-premium--right {
-        margin-right: 15px;
+    .section-premium--left img {
+        margin: auto;
     }
 
     .section-premium .slidearea {
@@ -1164,5 +1164,20 @@ footer {
 
     .section-map--info-item:last-child {
         margin-bottom: 0;
+    }
+
+    .footer--area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .footer--item.area2 {
+        text-align: center;
     }
 }
