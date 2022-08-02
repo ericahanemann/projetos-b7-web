@@ -13,3 +13,61 @@ header .line {
     background-color: var(--cor01);
     height: 10px;
 }
+
+.container {
+    width: 1140px;
+    margin: auto;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.header-left img{
+    width: 64px;
+    height: 64px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-search form {
+    display: flex;
+}
+
+.header-search input {
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #999;
+    outline: 0; /*tira aquela margem preta quando o input é selecionado*/
+    width: 100%;
+    max-width: 250px;
+}
+
+.header-search button {
+    border: 0;
+    background: transparent;
+    margin-left: -30px; /*pra fazer a lupinha entrar no im
+    input*/
+    cursor: pointer;
+}
+
+.header-search button img {
+    width: 16px;
+    height: 16px;
+}
+
+.header-menu {
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.header-menu img {
+    width: 24px;
+    height: 24px;
+}
