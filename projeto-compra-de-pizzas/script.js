@@ -14,6 +14,7 @@ pizzaJson.map((item, index) => {
         e.preventDefault(); //cancela a ação padrão
 
         let key = e.target.closest('.pizza-item').getAttribute('data-key');
+        //e.target seleciona o próprio item que é clicado
         modalQt = 1;
 
         qs('.pizzaBig img').src = pizzaJson[key].img;
@@ -50,4 +51,22 @@ function closeModal() {
 
 qsa('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item) => {
     item.addEventListener('click', closeModal);
+});
+
+qs('.pizzaInfo--qtmenos').addEventListener('click', () => {
+    if(modalQt > 1) {
+        modalQt--;
+        qs('.pizzaInfo--qt').innerHTML = modalQt;
+    }
+});
+qs('.pizzaInfo--qtmais').addEventListener('click', () => {
+    modalQt++;
+    qs('.pizzaInfo--qt').innerHTML = modalQt;
+});
+
+qsa('.pizzaInfo--size').forEach((size, sizeIndex) => {
+    size.addEventListener('click', () => {
+        qs('.pizzaInfo--size.selected').classList.remove('selected');
+        size.classList.add('selected');
+    })
 });
