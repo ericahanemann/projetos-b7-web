@@ -1,4 +1,6 @@
+let cart = [];
 let modalQt = 1;
+let modalKey;
 const qs = (element) => document.querySelector(element);
 const qsa = (element) => document.querySelectorAll(element);
 
@@ -15,6 +17,7 @@ pizzaJson.map((item, index) => {
 
         let key = e.target.closest('.pizza-item').getAttribute('data-key');
         //e.target seleciona o próprio item que é clicado
+        modalKey = key;
         modalQt = 1;
 
         qs('.pizzaBig img').src = pizzaJson[key].img;
@@ -69,4 +72,16 @@ qsa('.pizzaInfo--size').forEach((size, sizeIndex) => {
         qs('.pizzaInfo--size.selected').classList.remove('selected');
         size.classList.add('selected');
     })
+});
+
+qs('.pizzaInfo--addButton').addEventListener('click', () => {
+    let size = qs('.pizzaInfo--size.selected').getAttribute('data-key');
+
+    cart.push({
+        id: pizzaJson[modalKey].id,
+        size: size,
+        quantity: modalQt
+    });
+
+    closeModal();
 });
