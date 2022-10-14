@@ -75,13 +75,21 @@ qsa('.pizzaInfo--size').forEach((size, sizeIndex) => {
 });
 
 qs('.pizzaInfo--addButton').addEventListener('click', () => {
-    let size = qs('.pizzaInfo--size.selected').getAttribute('data-key');
+    let size = parseInt(qs('.pizzaInfo--size.selected').getAttribute('data-key'));
 
-    cart.push({
-        id: pizzaJson[modalKey].id,
-        size: size,
-        quantity: modalQt
-    });
+    let identifier = `${pizzaJson[modalKey].id}@${size}`;
+    
+    let indexPizza = cart.findIndex((item) => item.identifier == identifier);
+    if(indexPizza > -1) {
+        cart[indexPizza].quantity += modalQt;
+    } else {
+        cart.push({
+            identifier: identifier,
+            id: pizzaJson[modalKey].id,
+            size: size,
+            quantity: modalQt
+        });
+    }
 
     closeModal();
 });
